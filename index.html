@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Psychic Game</title>
+</head>
+
+<body>
+    <!--Html description or print out  -->
+    <h1>The Psychic Game</h1>
+    <h3>Guess what letter I'm thinking of</h3>
+    </br>
+    Wins: </br>
+    Losses: </br>
+    Guesses Left: </br>
+    Your Guesses so far: <output id="userGuest_out"></output>
+    </br>
+
+
+    <script>
+        // initial array declararion 
+        var Alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "w", "z"];
+        var user_record = [];
+        console.log(Alpha[0]);
+        //funtion on user press key
+        document.onkeyup = function(event) {
+            var userGuest = event.key;
+            user_record.push(userGuest);
+            console.log(user_record);
+            document.getElementById("userGuest_out").innerHTML = user_record.toString();
+
+        }
+    </script>
+</body>
+
+</html>
