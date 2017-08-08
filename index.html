@@ -28,6 +28,7 @@
             <h3>Guess what letter I'm thinking of</h3>
             </br>
         </div>
+
         <div class="row text-center">
             <div class="col-md-6 green">
                 Wins <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> <span id="winnin"></span>
@@ -75,6 +76,13 @@
             }
         }
 
+        function checkChoise(element, user_choise) {
+            var n = element.includes(user_choise);
+            if (!n) {
+                alert("Please user only Letters");
+            }
+        }
+
 
         // ********************************
         // MAIN EVALUATION USER vs COMPUTER  
@@ -84,7 +92,7 @@
         document.onkeyup = function(event) {
             var userGuest = event.key;
 
-            // ***I NEED TO EVALUATE IF THE KEY IS VALID
+            checkChoise(Alpha, userGuest);
 
 
             //evaluate computer choise Vs user choice
